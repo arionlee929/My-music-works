@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李菀滢音乐作品集</title>
+    <style>
+        :root {
+            --tech-blue: #00e5ff;
+            --deep-bg: #0a0f1d;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(0, 229, 255, 0.2);
+        }
+
+        body { 
+            font-family: "Microsoft YaHei", sans-serif; 
+            margin: 0; 
+            scroll-behavior: smooth;
+            color: #e0f7ff;
+            background: linear-gradient(135deg, var(--deep-bg) 0%, #162447 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+
+        h1 { 
+            text-align: center; 
+            font-size: 2.8em; 
+            margin-bottom: 60px; 
+            color: #fff;
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+            letter-spacing: 2px;
+        }
+
+        h2 { 
+            border-left: 5px solid var(--tech-blue); 
+            padding-left: 15px; 
+            margin-top: 100px;
+            color: var(--tech-blue);
+        }
+
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 120px; }
+        .grid-item { 
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            height: 180px; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.5em; text-decoration: none; color: #fff; 
+            border-radius: 12px; 
+            transition: all 0.4s;
+        }
+        .grid-item:hover { 
+            background: rgba(0, 229, 255, 0.15);
+            transform: translateY(-10px); 
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+        }
+
+        .media-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 30px; }
+        .media-card { 
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            padding: 20px; 
+            border-radius: 12px; 
+        }
+
+        .media-card p { margin-bottom: 15px; font-weight: bold; color: #b8e9ff; }
+
+        /* 视频容器比例控制 16:9 */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* 音频容器样式 */
+        .audio-wrapper {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .audio-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer { text-align: center; padding: 80px; color: #678; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>李菀滢音乐作品集</h1>
+
+    <div class="grid-container">
+        <a href="resume.pdf" target="_blank" class="grid-item">个人简历 (PDF)</a>
+        <a href="#game" class="grid-item">游戏音乐</a>
+        <a href="#film" class="grid-item">影视配乐</a>
+        <a href="#music" class="grid-item">纯音乐</a>
+    </div>
+
+    <section id="game">
+        <h2>游戏音乐</h2>
+        <div class="media-list">
+            <div class="media-card"><p>傩祭</p><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1vCshY_u1PstPzX3C17hXpC5yB_YVv1mI/preview"></iframe></div></div>
+            <div class="media-card"><p>山茶</p><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1X5r5pS0R69HhWn8_yK02I1V07T-V9jQn/preview"></iframe></div></div>
+        </div>
+    </section>
+
+    <section id="film">
+        <h2>影视配乐</h2>
+        <div class="media-list">
+            <div class="media-card"><p>蓝眼武士</p><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1pS3G9yXn8T6_Z1vD4mO-b_L8O6P0mF-J/preview"></iframe></div></div>
+            <div class="media-card"><p>狂野飙车9上海</p><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1D8R-vW3pL6mC8yO4zU_v9M8fQ2X-T5Kz/preview"></iframe></div></div>
+            <div class="media-card"><p>蓝色星原</p><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1G7T-yW1vN8P9Z4X0S2m_yK3F7Q2V0L1a/preview"></iframe></div></div>
+            <div class="media-card"><p>Boss战-奇格格达</p><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1R3v_vM6pL9S1yW3zV0n_yG4T5M2L8vK0/preview"></iframe></div></div>
+        </div>
+    </section>
+
+    <section id="music">
+        <h2>纯音乐</h2>
+        <div class="media-list">
+            <div class="media-card"><p>浅眠梦呓</p><div class="audio-wrapper"><iframe src="https://drive.google.com/file/d/1_9V-vW3L0pS1yW4zV0m_yG8T5M2L7vR1/preview"></iframe></div></div>
+            <div class="media-card"><p>曼珠沙华之舞</p><div class="audio-wrapper"><iframe src="https://drive.google.com/file/d/1X8T-yW1vL0pM2X3zV0n_yG7T5M1L9vQ3/preview"></iframe></div></div>
+            <div class="media-card"><p>小镇庆典</p><div class="audio-wrapper"><iframe src="https://drive.google.com/file/d/1V3v_vM6pL0S1yW5zV0m_yG9T5M3L0vP4/preview"></iframe></div></div>
+            <div class="media-card"><p>驰骋</p><div class="audio-wrapper"><iframe src="https://drive.google.com/file/d/1G9T-yW2vL0P5Z6X3S2n_yG4T7M2V1L0a/preview"></iframe></div></div>
+        </div>
+    </section>
+
+    <footer>© 2026 李菀滢 - Music Portfolio</footer>
+</div>
+
+</body>
+</html>
